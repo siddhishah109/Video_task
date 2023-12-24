@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+###VideoPlayer Component Documentation
+Overview
+The VideoPlayer component is designed to facilitate the integration of video playback functionality within your React application. It utilizes the react-player library to provide seamless and customizable video playback.
+##Installation
+npm install react-player
+##Usage
+##Importing the Component
+import VideoPlayer from './VideoPlayer';
+Incorporating VideoPlayer in Component
+<VideoPlayer />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Props
+The VideoPlayer component accepts the following props:
+#url (string, required): The URL or file path of the video to be played.
+#controls (boolean, optional, default: true): Enables or disables video playback controls.
+#loop (boolean, optional, default: true): Specifies whether the video should loop upon completion.
+#playIcon (boolean, optional): Displays a play icon on the video thumbnail.
+#className (string, optional): Custom CSS class name to style the video player container.
+#light (string, optional): URL or file path of a thumbnail to be displayed before the video starts.
+##Additional Information
+#Styling: You can customize the appearance of the video player by providing a custom CSS class name through the className prop.
+#Thumbnails: If you want to display a thumbnail before the video starts, use the light prop and provide the URL or file path of the thumbnail image.
+Following are the props and callback props that can be used according to the requirements :
+Props
 
-## Available Scripts
 
-In the project directory, you can run:
+##Prop
+#url
+The url of a video or song to play
+  ◦  Can be an array or MediaStream object
+#playing
+Set to true or false to pause or play the media
+false
+#loop
+Set to true or false to loop the media
+false
+#controls
+Set to true or false to display native player controls.
+  ◦  For Vimeo videos, hiding controls must be enabled by the video owner.
+false
+#light
+Set to true to show just the video thumbnail, which loads the full player on click
+  ◦  Pass in an image URL to override the preview image
+false
+#volume
+Set the volume of the player, between 0 and 1
+  ◦  null uses default volume on all players #357
+null
+#muted
+Mutes the player
+  ◦  Only works if volume is set
+false
+#playbackRate
+Set the playback rate of the player
+  ◦  Only supported by YouTube, Wistia, and file paths
+1
+#width
+Set the width of the player
+640px
+#height
+Set the height of the player
+360px
+#style
+Add inline styles to the root element
+{}
+#progressInterval
+The time between onProgress callbacks, in milliseconds
+1000
+#playsinline
+Applies the playsinline attribute where supported
+false
+#pip
+Set to true or false to enable or disable picture-in-picture mode
+  ◦  Only available when playing file URLs in certain browsers
+false
+#stopOnUnmount
+If you are using pip you may want to use stopOnUnmount={false} to continue playing in picture-in-picture mode even after ReactPlayer unmounts
+true
+#fallback
+Element or component to use as a fallback if you are using lazy loading
+null
+#wrapper
+Element or component to use as the container element
+div
+#playIcon
+Element or component to use as the play icon in light mode
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##previewTabIndex
+Set the tab index to be used on light mode
+0
+config
+Override options for the various players, see config prop
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##Callback props
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Callback props take a function that gets fired on various player events:
+Prop
+Description
+onReady
+Called when media is loaded and ready to play. If playing is set to true, media will play immediately
+onStart
+Called when media starts playing
+onPlay
+Called when media starts or resumes playing after pausing or buffering
+onProgress
+Callback containing played and loaded progress as a fraction, and playedSeconds and loadedSeconds in seconds
+  ◦  eg { played: 0.12, playedSeconds: 11.3, loaded: 0.34, loadedSeconds: 16.7 }
+onDuration
+Callback containing duration of the media, in seconds
+onPause
+Called when media is paused
+onBuffer
+Called when media starts buffering
+onBufferEnd
+Called when media has finished buffering
+  ◦  Works for files, YouTube and Facebook
+onSeek
+Called when media seeks with seconds parameter
+onPlaybackRateChange
+Called when playback rate of the player changed
+  ◦  Only supported by YouTube, Vimeo (if enabled), Wistia, and file paths
+onPlaybackQualityChange
+Called when playback quality of the player changed
+  ◦  Only supported by YouTube (if enabled)
+onEnded
+Called when media finishes playing
+  ◦  Does not fire when loop is set to true
+onError
+Called when an error occurs whilst attempting to play media
+onClickPreview
+Called when user clicks the light mode preview
+onEnablePIP
+Called when picture-in-picture mode is enabled
+onDisablePIP
+Called when picture-in-picture mode is disabled
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

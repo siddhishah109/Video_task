@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+.videoplayer{
+  width: 50vw;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home{
+  padding-top: 10vh;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.video-react{
+ /* height: auto!important;
+ width: auto !important; */
+
+}
+video{
+  border-radius: 10px;
+}
+.video-card{
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 2vh 3vw;
+  padding: 2vh 3vw;
+  margin-bottom: 5vh;
+  background:#fff4b8;
+}
+
+.disc{
+  width: 30vw;
+  margin-left: 1vw;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+  .video-card{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  .videoplayer{
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .disc {
+    width: 70vw;
+    margin-left: 1vw;
+    justify-content: space-around;
+}
+}
+
+
+
+.navbart{
+  background: saddlebrown;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+@media only screen and (min-width: 601px) {
+  main{
+    background: url('../src/assets/bg1.png');
+      background-size: contain;
+      position: sticky;
+      background-attachment: fixed;
+  }
+  .nav-links-nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 600px) {
+  .nav-links-nav{
+    width: 100%;
+}
+
+  .container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }

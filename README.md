@@ -11,17 +11,15 @@ Incorporating VideoPlayer in Component
 
 ## Props
 The VideoPlayer component accepts the following props:
-# url (string, required): The URL or file path of the video to be played.
-# controls (boolean, optional, default: true): Enables or disables video playback controls.
-# loop (boolean, optional, default: true): Specifies whether the video should loop upon completion.
-# playIcon (boolean, optional): Displays a play icon on the video thumbnail.
-# className (string, optional): Custom CSS class name to style the video player container.
-# light (string, optional): URL or file path of a thumbnail to be displayed before the video starts.
+url (string, required): The URL or file path of the video to be played.
+controls (boolean, optional, default: true): Enables or disables video playback controls.
+loop (boolean, optional, default: true): Specifies whether the video should loop upon completion.
+playIcon (boolean, optional): Displays a play icon on the video thumbnail.className (string, optional): Custom CSS class name to style the video player container.
+light (string, optional): URL or file path of a thumbnail to be displayed before the video starts.
 ## Additional Information
-# Styling: You can customize the appearance of the video player by providing a custom CSS class name through the className prop.
-# Thumbnails: If you want to display a thumbnail before the video starts, use the light prop and provide the URL or file path of the thumbnail image.
+Styling: You can customize the appearance of the video player by providing a custom CSS class name through the className prop.
+Thumbnails: If you want to display a thumbnail before the video starts, use the light prop and provide the URL or file path of the thumbnail image.
 Following are the props and callback props that can be used according to the requirements :
-Props
 
 
 ## Prop

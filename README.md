@@ -1,92 +1,92 @@
-###VideoPlayer Component Documentation
+### VideoPlayer Component Documentation
 Overview
 The VideoPlayer component is designed to facilitate the integration of video playback functionality within your React application. It utilizes the react-player library to provide seamless and customizable video playback.
-##Installation
+## Installation
 npm install react-player
-##Usage
-##Importing the Component
+## Usage
+## Importing the Component
 import VideoPlayer from './VideoPlayer';
 Incorporating VideoPlayer in Component
 <VideoPlayer />
 
-##Props
+## Props
 The VideoPlayer component accepts the following props:
-#url (string, required): The URL or file path of the video to be played.
-#controls (boolean, optional, default: true): Enables or disables video playback controls.
-#loop (boolean, optional, default: true): Specifies whether the video should loop upon completion.
-#playIcon (boolean, optional): Displays a play icon on the video thumbnail.
-#className (string, optional): Custom CSS class name to style the video player container.
-#light (string, optional): URL or file path of a thumbnail to be displayed before the video starts.
-##Additional Information
-#Styling: You can customize the appearance of the video player by providing a custom CSS class name through the className prop.
-#Thumbnails: If you want to display a thumbnail before the video starts, use the light prop and provide the URL or file path of the thumbnail image.
+# url (string, required): The URL or file path of the video to be played.
+# controls (boolean, optional, default: true): Enables or disables video playback controls.
+# loop (boolean, optional, default: true): Specifies whether the video should loop upon completion.
+# playIcon (boolean, optional): Displays a play icon on the video thumbnail.
+# className (string, optional): Custom CSS class name to style the video player container.
+# light (string, optional): URL or file path of a thumbnail to be displayed before the video starts.
+## Additional Information
+# Styling: You can customize the appearance of the video player by providing a custom CSS class name through the className prop.
+# Thumbnails: If you want to display a thumbnail before the video starts, use the light prop and provide the URL or file path of the thumbnail image.
 Following are the props and callback props that can be used according to the requirements :
 Props
 
 
-##Prop
-#url
+## Prop
+# url
 The url of a video or song to play
   ◦  Can be an array or MediaStream object
-#playing
+# playing
 Set to true or false to pause or play the media
 false
-#loop
+# loop
 Set to true or false to loop the media
 false
-#controls
+# controls
 Set to true or false to display native player controls.
   ◦  For Vimeo videos, hiding controls must be enabled by the video owner.
 false
-#light
+# light
 Set to true to show just the video thumbnail, which loads the full player on click
   ◦  Pass in an image URL to override the preview image
 false
-#volume
+# volume
 Set the volume of the player, between 0 and 1
   ◦  null uses default volume on all players #357
 null
-#muted
+# muted
 Mutes the player
   ◦  Only works if volume is set
 false
-#playbackRate
+# playbackRate
 Set the playback rate of the player
   ◦  Only supported by YouTube, Wistia, and file paths
 1
-#width
+# width
 Set the width of the player
 640px
-#height
+# height
 Set the height of the player
 360px
-#style
+# style
 Add inline styles to the root element
 {}
-#progressInterval
+# progressInterval
 The time between onProgress callbacks, in milliseconds
 1000
-#playsinline
+# playsinline
 Applies the playsinline attribute where supported
 false
-#pip
+# pip
 Set to true or false to enable or disable picture-in-picture mode
   ◦  Only available when playing file URLs in certain browsers
 false
-#stopOnUnmount
+# stopOnUnmount
 If you are using pip you may want to use stopOnUnmount={false} to continue playing in picture-in-picture mode even after ReactPlayer unmounts
 true
-#fallback
+# fallback
 Element or component to use as a fallback if you are using lazy loading
 null
-#wrapper
+# wrapper
 Element or component to use as the container element
 div
-#playIcon
+# playIcon
 Element or component to use as the play icon in light mode
 
 
-##previewTabIndex
+## previewTabIndex
 Set the tab index to be used on light mode
 0
 config

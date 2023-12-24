@@ -97,7 +97,7 @@ Override options for the various players, see config prop
 
 
 
-##Callback props
+## Callback props
 
 
 Callback props take a function that gets fired on various player events:
